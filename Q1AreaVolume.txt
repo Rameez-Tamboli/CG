@@ -1,0 +1,40 @@
+package com.package1;
+
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Input radius of the Sphere");
+		int radius=sc.nextInt();
+		Sphere s1=new Sphere(radius);
+		System.out.println("V of sphere="+s1.volume());
+		System.out.println("A of sphere="+s1.area());
+	}
+
+}
+
+----------------------------------------------------------------------------------
+
+package com.package1;
+
+public class Sphere {
+int radius;
+
+public Sphere(int radius) {
+	super();
+	this.radius = radius;
+}
+
+public double  area()
+{
+	double area=4*Math.PI*radius*radius;
+	return area;
+}
+public double  volume()
+{
+	double volume=(4/3)*Math.PI*radius*radius*radius;
+	return volume;
+}
+}
